@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Expression Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1 class="title">FACE EXPRESSION ANALYZER</h1>
+
+    <div class="container">
+        <div class="left-box">
+
+            <div id="preview" class="preview-box">
+
+                <video id="cameraStream" autoplay 
+                    style="display:none; width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                </video>
+
+                <button id="captureBtn" class="btn-blue"
+                    style="
+                        position:absolute;
+                        bottom:10px;
+                        left:50%;
+                        transform:translateX(-50%);
+                        display:none;
+                        padding:10px 20px;
+                        border-radius:8px;
+                        cursor:pointer;">
+                    Ambil Foto
+                </button>
+
+            </div>
+
+            <div class="button-row">
+                <button id="cameraBtn" class="btn-green">KAMERA</button>
+                <button id="uploadBtn" class="btn-green">UPLOAD</button>
+            </div>
+
+            <button id="analyzeBtn" class="btn-blue">ANALISIS</button>
+
+        </div>
+
+        <div class="right-box info-box">
+            <p class="desc">
+                Face expression analyzer merupakan website yang membantumu mengenali emosi melalui ekspresi wajah.
+                Dengan teknologi AI, sistem ini memberikan gambaran mengenai kondisi psikologis yang mungkin sedang kamu rasakan.
+            </p>
+
+            <p><strong>Petunjuk Penggunaan:</strong></p>
+            <ol>
+                <li>Pilih kamera atau upload untuk ambil gambar</li>
+                <li>Klik tombol analisis</li>
+                <li>Tunggu hasil analisis</li>
+                <li>Gunakan tombol "Download Hasil" untuk menyimpan laporan</li>
+                <li>Klik tombol "Beranda" untuk kembali ke tampilan awal</li>
+            </ol>
+
+            <p><em>Terima kasih</em></p>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

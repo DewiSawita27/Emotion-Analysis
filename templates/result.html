@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Analisis Ekspresi</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1 class="title">Hasil Analisis Ekspresi Wajah</h1>
+
+    <div class="container">
+
+        <div class="left-box">
+            <div class="preview-box">
+                <img src="{{ image_path }}" alt="Hasil Foto">
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Hasil Analisis</h2>
+            
+            <p class="desc"><b>Ekspresi:</b> {{ ekspresi }}</p>
+            <p class="desc"><b>Persentase:</b> {{ persen }}%</p>
+            <p class="desc"><b>Indikasi:</b><br> {{ indikasi }}</p>
+            <p class="desc"><b>Solusi:</b><br> {{ solusi }}</p>
+
+            <a href="/download?ekspresi={{ ekspresi }}&persen={{ persen }}&indikasi={{ indikasi }}&solusi={{ solusi }}">
+                <button class="btn-blue" style="margin-top: 20px; width: 100%;">Download Hasil PDF</button>
+            </a>
+
+            <a href="/" style="text-decoration: none;">
+                <button class="btn-green" style="margin-top: 12px; width: 100%;">Kembali ke Beranda</button>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
